@@ -115,6 +115,7 @@ public class Car {
 //    }
 
     private String generateLicensePlate() {
+        //generating 3 random uppercase letter characters
         char firstChar = (char) random.nextInt(65, 91);
         char secondChar = (char) random.nextInt(65, 91);
         char thirdChar = (char) random.nextInt(65, 91);
@@ -122,7 +123,8 @@ public class Car {
         return firstChar + "" + secondChar + "" + thirdChar + "-" + random.nextInt(100, 1000);
     }
 
-    //static methods
+
+    //static method(s)
     public static int getCarCounter() {
         return carCounter;
     }

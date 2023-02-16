@@ -1,13 +1,8 @@
 package be.intecbrussel;
 
 public class Driver {
-    /*
-    Nu zit de driver als String in de Car class, dit gaan we aanpassen door een driver class aan te maken.
-    Nu gebruiken we niet meer de String als datatype maar de driver class.
-    */
-
     //properties
-    private String name = "unknown";
+    private String driverName = "unknown";
 
 
     //constructors
@@ -15,18 +10,18 @@ public class Driver {
 
     }
 
-    public Driver(String name) {
-        setName(name);
+    public Driver(String driverName) {
+        setDriverName(driverName);
     }
 
 
     //getters & setters
-    public String getName() {
-        return name;
+    public String getDriverName() {
+        return driverName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
     }
 
 
@@ -35,7 +30,7 @@ public class Driver {
         //naam van de bestuurder moet minstens 5 karakters lang zijn en mag niet enkel spaties bevatten
         //dwz minstens 4 spaties + 1 ander karakter is OK
         if (driverName.trim().length() >= 1) {
-            name = driverName;
+            this.driverName = driverName;
         } else {
             System.out.println("Niet toegestaan.");
         }
@@ -44,6 +39,6 @@ public class Driver {
     //overrides
     @Override
     public String toString() {
-        return "name: " + name;
+        return "driverName: " + driverName;
     }
 }
