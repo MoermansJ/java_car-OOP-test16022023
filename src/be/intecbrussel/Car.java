@@ -83,6 +83,10 @@ public class Car {
         return lightStatus;
     }
 
+    public void setDriver(Driver driver){
+        this.driver = driver;
+    }
+
 
     //custom methods
     public void speedUp() {
@@ -119,7 +123,7 @@ public class Car {
     }
 
     public void assignDriver(Driver driver) {
-        this.driver = driver;
+        setDriver(driver);
     }
 
 //    private String generateLicensePlate() {
@@ -145,6 +149,6 @@ public class Car {
     //overrides
     @Override
     public String toString() {
-        return "Colour: " + colour + " topSpeed: " + topSpeed + " horsePower: " + horsePower + " currentVelocity: " + currentVelocity;
+        return "Colour: " + colour + " topSpeed: " + topSpeed + " horsePower: " + horsePower + " currentVelocity: " + currentVelocity + " driver: " + driver + " licenseplate: " + licensePlate + " lights: " + getLightStatus();
     }
 }
