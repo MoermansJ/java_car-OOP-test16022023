@@ -75,6 +75,14 @@ public class Car {
         return this.driver.toString();
     }
 
+    public void setLightStatus(boolean lightStatus) {
+        this.lightStatus = lightStatus;
+    }
+
+    public boolean getLightStatus() {
+        return lightStatus;
+    }
+
 
     //custom methods
     public void speedUp() {
@@ -106,8 +114,8 @@ public class Car {
     }
 
     public void toggleLights() {
-        lightStatus = !lightStatus;
-        System.out.println("The lights are " + (lightStatus ? "on" : "off"));
+        setLightStatus(!getLightStatus());
+        System.out.println("The lights are " + (getLightStatus() ? "on" : "off"));
     }
 
     public void assignDriver(Driver driver) {
