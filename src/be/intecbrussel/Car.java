@@ -94,7 +94,7 @@ public class Car {
     }
 
     public void repaint(String colour) {
-        this.colour = colour;
+        setColour(colour);
     }
 
     public void repair() {
