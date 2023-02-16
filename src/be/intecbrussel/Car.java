@@ -63,6 +63,10 @@ public class Car {
         return currentVelocity;
     }
 
+    private void setCurrentVelocity(int currentVelocity) {
+        this.currentVelocity = currentVelocity;
+    }
+
     public String getLicensePlate() {
         return licensePlate;
     }
@@ -77,9 +81,9 @@ public class Car {
         int newVelocity = currentVelocity + 5;
 
         if (newVelocity < topSpeed) {
-            currentVelocity = newVelocity;
-        } else if (newVelocity >= topSpeed) {
-            currentVelocity = topSpeed;
+            setCurrentVelocity(newVelocity);
+        } else {
+            setCurrentVelocity(topSpeed);
         }
     }
 
@@ -87,9 +91,9 @@ public class Car {
         int newVelocity = currentVelocity - 5;
 
         if (newVelocity > 0) {
-            currentVelocity = newVelocity;
-        } else if (newVelocity <= 0) {
-            currentVelocity = 0;
+            setCurrentVelocity(newVelocity);
+        } else {
+            setCurrentVelocity(0);
         }
     }
 
