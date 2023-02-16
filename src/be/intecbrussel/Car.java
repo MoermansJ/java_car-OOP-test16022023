@@ -76,16 +76,20 @@ public class Car {
     public void speedUp() {
         int newVelocity = currentVelocity + 5;
 
-        if (newVelocity <= topSpeed) {
+        if (newVelocity < topSpeed) {
             currentVelocity = newVelocity;
+        } else if (newVelocity >= topSpeed) {
+            currentVelocity = topSpeed;
         }
     }
 
     public void slowDown() {
         int newVelocity = currentVelocity - 5;
 
-        if (newVelocity >= 0) {
+        if (newVelocity > 0) {
             currentVelocity = newVelocity;
+        } else if (newVelocity <= 0) {
+            currentVelocity = 0;
         }
     }
 
