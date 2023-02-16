@@ -27,9 +27,9 @@ public class Car {
     }
 
     public Car(String colour, int topSpeed, int horsePower) {
-        this.colour = colour;
-        this.topSpeed = topSpeed;
-        this.horsePower = horsePower;
+        setColour(colour);
+        setTopSpeed(topSpeed);
+        setHorsePower(horsePower);
         carCounter++;
     }
 
