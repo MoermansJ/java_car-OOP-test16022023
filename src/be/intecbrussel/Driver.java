@@ -23,8 +23,10 @@ public class Driver {
     public void setDriverName(String driverName) {
         //naam van de bestuurder moet minstens 5 karakters lang zijn en mag niet enkel spaties bevatten
         //dwz minstens 4 spaties + 1 ander karakter is OK
-        if (driverName.trim().length() >= 1) {
-            setDriverName(driverName);
+        driverName = driverName.trim();
+
+        if (driverName.length() >= 1) {
+            this.driverName = driverName;
         } else {
             System.out.println("Niet toegestaan.");
         }

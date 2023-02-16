@@ -75,7 +75,7 @@ public class Car {
         return this.driver.toString();
     }
 
-    public void setLightStatus(boolean lightStatus) {
+    private void setLightStatus(boolean lightStatus) {
         this.lightStatus = lightStatus;
     }
 
@@ -83,7 +83,7 @@ public class Car {
         return lightStatus;
     }
 
-    public void setDriver(Driver driver){
+    private void setDriver(Driver driver){
         this.driver = driver;
     }
 
@@ -149,6 +149,6 @@ public class Car {
     //overrides
     @Override
     public String toString() {
-        return "Colour: " + colour + " topSpeed: " + topSpeed + " horsePower: " + horsePower + " currentVelocity: " + currentVelocity + " driver: " + driver + " licenseplate: " + licensePlate + " lights: " + getLightStatus();
+        return "Colour: " + colour + " topSpeed: " + topSpeed + " horsePower: " + horsePower + " currentVelocity: " + currentVelocity + " driver: " + driver + " licensePlate: " + licensePlate + " lights: " + getLightStatus();
     }
 }
